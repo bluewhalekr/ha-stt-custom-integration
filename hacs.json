@@ -1,0 +1,10 @@
+{
+    "name": "RS Custom STT Service (Renew)",
+    "render_readme": true,
+    "content_in_root": false,
+    "domains": [
+        "custom_stt_renew_rs"
+    ],
+    "homeassistant": "2024.1.0",
+    "iot_class": "cloud_push"
+}

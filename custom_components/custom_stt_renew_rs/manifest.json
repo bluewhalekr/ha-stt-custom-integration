@@ -1,0 +1,17 @@
+{
+    "domain": "custom_stt_renew_rs",
+    "name": "Custom STT renew service for rs",
+    "documentation": "https://github.com/bluewhalekr/ha-stt-custom-integration",
+    "issue_tracker": "https://github.com/bluewhalekr/ha-stt-custom-integration/issues",
+    "dependencies": [
+        "stt"
+    ],
+    "codeowners": [],
+    "requirements": [
+        "aiohttp",
+        "pydub",
+        "netifaces"
+    ],
+    "version": "1.0.0",
+    "iot_class": "cloud_push"
+}
