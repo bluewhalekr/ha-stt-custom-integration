@@ -196,8 +196,17 @@ class RemoteSTTProvider(Provider):
             return SpeechResult("", SpeechResultState.ERROR)
 
 
-async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> None:
-    """Set up Remote STT from a config entry."""
-    # STT Provider 등록
-    provider = RemoteSTTProvider(hass, entry)
-    hass.components.stt.async_register(DOMAIN, provider)
+async def async_setup_platform(
+    hass: HomeAssistant, config, async_add_entities, discovery_info=None
+):
+    """Platform setup."""
+    return True
+
+
+async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
+    """Set up the STT platform from config entry."""
+    api_key = hass.data[DOMAIN][entry.entry_id]["api_key"]
+    provider = RemoteSTTProvider(hass, api_key)
+
+    hass.data[DOMAIN][entry.entry_id]["provider"] = provider
+    return True
