@@ -1,0 +1,16 @@
+{
+    "config": {
+        "step": {
+            "user": {
+                "title": "STT 서버 설정",
+                "description": "STT 서버 연결을 위한 API 키를 입력하세요.",
+                "data": {
+                    "api_key": "API 키"
+                }
+            }
+        },
+        "error": {
+            "invalid_auth": "인증 키가 올바르지 않습니다."
+        }
+    }
+}

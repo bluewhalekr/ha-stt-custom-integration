@@ -1,0 +1,14 @@
+{
+    "name": "ha_stt_custom_integration",
+    "description": "ha_stt_custom_integration",
+    "domain": "ha_stt_custom_integration",
+    "codeowners": [
+        "@amaramusic"
+    ],
+    "requirements": [],
+    "documentation": "https://github.com/bluewhalekr/ha-stt-custom-integration",
+    "issue_tracker": "https://github.com/bluewhalekr/ha-stt-custom-integration/issues",
+    "version": "1.0.0",
+    "iot_class": "cloud_polling",
+    "render_readme": true
+}

@@ -1,0 +1,22 @@
+{
+    "domain": "ha_stt_custom_integration",
+    "name": "ha_stt_custom_integration",
+    "version": "1.0.0",
+    "documentation": "https://github.com/bluewhalekr/ha-stt-custom-integration",
+    "issue_tracker": "https://github.com/bluewhalekr/ha-stt-custom-integration/issues",
+    "dependencies": [
+        "assist_pipeline"
+    ],
+    "codeowners": [
+        "@amaramusic"
+    ],
+    "requirements": [
+        "aiohttp",
+        "pydub",
+        "netifaces",
+        "requests"
+    ],
+    "iot_class": "cloud_polling",
+    "integration_type": "service",
+    "config_flow": true
+}
