@@ -5,6 +5,7 @@ import io
 import logging
 import wave
 from collections.abc import AsyncIterable
+from typing import Any
 
 import async_timeout
 import netifaces
@@ -196,17 +197,12 @@ class RemoteSTTProvider(Provider):
             return SpeechResult("", SpeechResultState.ERROR)
 
 
-async def async_setup_platform(
-    hass: HomeAssistant, config, async_add_entities, discovery_info=None
-):
-    """Platform setup."""
-    return True
+async def async_setup_entry(
+    hass: HomeAssistant, entry: ConfigEntry, async_add_entities: Any
+) -> None:
+    """Set up Remote STT from a config entry."""
+    api_key = entry.data[CONF_API_KEY]
 
-
-async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
-    """Set up the STT platform from config entry."""
-    api_key = hass.data[DOMAIN][entry.entry_id]["api_key"]
+    # STT Provider 등록
     provider = RemoteSTTProvider(hass, api_key)
-
-    hass.data[DOMAIN][entry.entry_id]["provider"] = provider
-    return True
+    hass.components.stt.async_register(DOMAIN, provider)
