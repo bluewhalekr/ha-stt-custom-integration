@@ -3,8 +3,8 @@ custom_components/remote_stt/const.py
 상수 정의 업데이트
 """
 
-DOMAIN = "remote_stt"
-NAME = "Remote STT"
+DOMAIN = "ha_stt_custom_integration"
+NAME = "ha_stt_custom_integration"
 
 CONF_API_KEY = "api_key"
 SERVER_URL = "https://rs-audio-router.azurewebsites.net/api/v1/audio-routing"
